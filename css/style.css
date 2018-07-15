@@ -138,6 +138,7 @@ a:focus {
 
 .nav {
   display: flex;
+  flex: 1;
   flex-wrap: nowrap;
 }
 
@@ -158,24 +159,27 @@ a:focus {
   -webkit-appearance: none;
   /* font-family: inherit; */
   /* font-size: 16px; */
+  width: 80px;
+  margin-left: 20px;
+  border: 1px solid transparent;
 
   padding: 2px 2px 2px 34px;
-  border: 1px solid #bbb;
   border-radius: 30px;
   color: #454545;
   background: url(../images/search-icon.svg) no-repeat 7px 1px;
-  transition: width 0.5s ease;
-  height: 26px;
-  width: 150px;
+  transition: 0.5s ease;
   margin-left: 10px;
-  background-color: #f8f8f8;
   transition: 0.3s ease;
+  background-color: #f8f8f8;
+  height: 26px;
+  border: 1px solid #bbb;
 }
 
 .search-box:focus {
-  background-color: #f9f9f9;
+  width: 150px;
   outline: 0;
-  border-color: #666;
+  border-color: #bbb;
+  background-color: #fff;
 }
 
 /* BANNER - HERO */
@@ -355,7 +359,7 @@ a:focus {
 @media (max-width: 1180px) {
   /* ნავიგაცია მორჩა */
   .navbar-container {
-    display: block;
+    align-items: flex-start;
   }
 
   .nav {
@@ -366,10 +370,11 @@ a:focus {
     flex: 1 1 auto;
   }
 
-  .search {
-    position: absolute;
-    right: 0;
-    top: -40px;
+  .search-box {
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 36px;
+    border-color: transparent;
   }
 }
 
@@ -439,10 +444,6 @@ a:focus {
     top: 0;
   }
 
-  .search {
-    right: 4%;
-  }
-
   .services-container {
     grid-gap: 2rem;
   }
@@ -452,12 +453,7 @@ a:focus {
     margin: 0 auto;
   }
 
-  .header-top {
-    height: 136px;
-  }
-
   .nav a {
-    font-size: 13px;
     padding-left: 6px;
     padding-right: 6px;
   }
