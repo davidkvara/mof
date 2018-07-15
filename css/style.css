@@ -1,42 +1,46 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "nino";
+  font-family: "BPG Nino Mtavruli";
+  src: url("../fonts/bpg-nino-mtavruli-webfont.woff2") format("woff2"),
+    url("../fonts/bpg-nino-mtavruli-webfont.woff") format("woff"),
+    url("../fonts/bpg-nino-mtavruli-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/nino_mtavruli.woff") format("woff"),
-    url("../fonts/nino_mtavruli.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "nino_bold";
+  /* BPG Nino Mtavruli Bold */
+  font-family: "BPG Nino Mtavruli";
+  src: url("../fonts/bpg-nino-mtavruli-bold-webfont.woff2") format("woff2"),
+    url("../fonts/bpg-nino-mtavruli-bold-webfont.woff") format("woff"),
+    url("../fonts/bpg-nino-mtavruli-bold-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/bpg-nino-mtavruli-bold-webfont.ttf") format("truetype");
 }
 
 @font-face {
+  /* მძიმე ფონტია, შესაცვლელია */
   font-family: "dejavu";
+  src: url("../fonts/dejavusans-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/dejavusans-webfont.woff") format("woff");
 }
 
 body {
-  background: #fff;
   color: #262626;
   font-size: 14px;
-  line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.4;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 a {
@@ -50,14 +54,24 @@ a:focus {
   outline-color: gold;
 }
 
-/* starting from here */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-/* რესპონსიული კონტეინერი */
 .wrapper {
-  max-width: 1140px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+/* starting from here */
 
 .header {
   background: #fff;
@@ -66,26 +80,26 @@ a:focus {
 /* HEADER TOP */
 
 .header-top {
-  margin: 14px 0;
+  padding: 14px 0;
   position: relative;
+  display: flex;
 }
 
 .logo {
-  font-family: "nino";
-  width: 200px;
+  font-family: "BPG Nino Mtavruli";
   display: flex;
   align-items: center;
   color: #666;
 }
 
 .logo span {
-  margin: 6px 0 0 8px;
-  line-height: 1.2;
+  margin: 8px 0 0 8px;
+  line-height: 1.3;
 }
 
 .extra {
   position: absolute;
-  top: 0;
+  top: 14px;
   right: 0;
   display: flex;
   background: #fff;
@@ -98,7 +112,8 @@ a:focus {
 }
 
 .lang {
-  font-family: "nino_bold";
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
   text-transform: uppercase;
   color: #333;
   font-size: 12px;
@@ -106,37 +121,33 @@ a:focus {
 
 .lang.active {
   opacity: 0.8;
-  font-family: "nino";
+  font-weight: normal;
 }
 
 /* NAVIGATION MENU */
 
 .navbar {
-  background: #f8f8f8;
-  padding: 0 8px;
+  background: #f7f7f7;
 }
 
 .navbar-container {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex: 1;
+  flex-wrap: nowrap;
 }
 
-/* გასაკლასი */
 .nav a {
-  display: block;
-  white-space: nowrap;
-  font-family: "nino";
+  display: flex;
+  padding: 10px 10px 6px;
+  font-family: "BPG Nino Mtavruli";
   letter-spacing: 0.5px;
-  padding: 10px 0 6px;
-  transition: 0.2s ease;
+  white-space: nowrap;
+  transition: 0.3s ease;
 }
 
 .nav a:hover {
@@ -144,32 +155,32 @@ a:focus {
 }
 
 .search-box {
-  padding: 2px 4px 2px 34px;
-  font-size: 16px;
-  width: 34px;
-  margin-left: 20px;
-  border: 0;
+  -webkit-appearance: none;
+  /* font-family: inherit; */
+  /* font-size: 16px; */
+
+  padding: 2px 2px 2px 34px;
+  border: 1px solid #bbb;
   border-radius: 30px;
   color: #454545;
-  background: url(../images/search-icon.png) no-repeat 8px 3px;
-  transition: width 0.2s ease;
-  cursor: pointer;
+  background: url(../images/search-icon.svg) no-repeat 7px 1px;
+  transition: width 0.5s ease;
   height: 26px;
+  width: 150px;
+  margin-left: 10px;
+  background-color: #f8f8f8;
+  transition: 0.3s ease;
 }
 
-.search-box.show {
+.search-box:focus {
+  background-color: #f9f9f9;
   outline: 0;
-  border: 1px solid #bbb;
-  width: 190px;
-  cursor: auto;
+  border-color: #666;
 }
 
-/* HEADER ENDS HERE */
-
-/* BANNER - HERO GRADIENT */
+/* BANNER - HERO */
 
 .banner {
-  /* აქედან http://uigradients.com/ */
   /* height: 500px; */
   background: #4e54c8; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -189,28 +200,39 @@ a:focus {
   padding: 8% 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .helpful-links {
   max-width: 320px;
-  padding: 6px;
+  padding: 1.5rem 0.45rem;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  color: #fff;
 }
 
 .helpful-links a {
-  display: block;
-  margin: 18px 0;
+  display: inline-block;
   line-height: 1.4;
-  font-family: "nino";
+  font-family: "BPG Nino Mtavruli";
   letter-spacing: 0.3px;
+  transition: 0.4s ease;
+  color: #fff;
+  border-bottom: 0.12rem solid transparent;
+}
+
+.helpful-links a + a {
+  margin-top: 0.875rem;
+}
+
+.helpful-links a:hover {
+  border-color: #fff;
 }
 
 .widget {
   padding: 1rem;
   border: 3px solid #fff;
-  font-family: "nino";
+  font-family: "BPG Nino Mtavruli";
   font-size: 14px;
 }
 
@@ -222,24 +244,21 @@ a:focus {
 }
 
 /* SERVICES */
-
 .services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  grid-gap: 2rem;
-  padding: 40px 0 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 10px;
 }
 
 .service {
   display: flex;
-  text-align: center;
-  align-items: center;
   flex-direction: column;
-  padding: 10px 1rem;
-}
-
-.service:hover .service-title {
-  color: #68a4c0;
+  text-align: center;
+  min-width: 190px;
+  max-width: 240px;
+  margin: 0 20px 40px;
 }
 
 .circle {
@@ -247,7 +266,7 @@ a:focus {
   height: 120px;
   border-radius: 50%;
   border: 1px solid #bbb;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
   display: flex;
   justify-content: center;
   line-height: 100px;
@@ -255,13 +274,38 @@ a:focus {
   color: salmon;
 }
 
+@supports (display: grid) {
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-gap: 2.5rem;
+    padding: 40px 10px 100px;
+  }
+
+  .service {
+    padding: 10px 1rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .circle {
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+}
+
 .service-title {
-  font-size: 12px;
-  color: #888;
-  font-family: "nino";
-  letter-spacing: 1px;
-  line-height: 1.5;
+  font-family: "BPG Nino Mtavruli";
+  font-size: 0.78rem;
+  color: #444;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  line-height: 1.55;
   transition: 0.2s ease-in-out;
+}
+
+.service:hover .service-title {
+  color: #5d9bb8;
 }
 
 /* FOOTER */
@@ -286,12 +330,15 @@ a:focus {
 
 .footer-section {
   flex: 1;
+  padding: 0 0.5rem;
 }
 
 .footer-section li:first-child .footer-section-title {
-  font-family: "nino_bold";
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
   font-size: 14px;
   margin-bottom: 12px;
+  letter-spacing: 0.5px;
   display: block;
 }
 
@@ -300,35 +347,33 @@ a:focus {
   margin: 8px 0;
   display: inline-block;
   font-family: "dejavu";
-  font-weight: 400;
   line-height: 1.5;
 }
 
 /* small screen */
 
-@media screen and (max-width: 48rem) {
-  .extra {
-    top: -10px;
-  }
-
+@media (max-width: 1180px) {
+  /* ნავიგაცია მორჩა */
   .navbar-container {
-    flex-direction: column;
-    text-align: center;
+    display: block;
   }
 
   .nav {
-    display: block;
+    overflow-x: auto;
   }
 
   .nav a {
-    margin: 14px;
-    display: block;
+    flex: 1 1 auto;
   }
 
-  .search-box {
-    margin-bottom: 10px;
+  .search {
+    position: absolute;
+    right: 0;
+    top: -40px;
   }
+}
 
+@media (max-width: 48rem) {
   .widget {
     display: none;
   }
@@ -339,5 +384,81 @@ a:focus {
 
   .footer-section {
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav {
+    mask-image: -webkit-linear-gradient(
+      to right,
+      transparent,
+      #f8f8f8 20px,
+      #f8f8f8 90%,
+      transparent
+    );
+    mask-image: -moz-linear-gradient(
+      to right,
+      transparent,
+      #f8f8f8 20px,
+      #f8f8f8 90%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #f8f8f8 20px,
+      #f8f8f8 90%,
+      transparent
+    );
+    -webkit-mask-image: -webkit-linear-gradient(
+      to right,
+      transparent,
+      #f8f8f8 20px,
+      #f8f8f8 90%,
+      transparent
+    );
+    -webkit-mask-image: -moz-linear-gradient(
+      to right,
+      transparent,
+      #f8f8f8 20px,
+      #f8f8f8 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #f8f8f8 20px,
+      #f8f8f8 90%,
+      transparent
+    );
+  }
+}
+
+@media (max-width: 400px) {
+  .extra {
+    top: 0;
+  }
+
+  .search {
+    right: 4%;
+  }
+
+  .services-container {
+    grid-gap: 2rem;
+  }
+
+  .service {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .header-top {
+    height: 136px;
+  }
+
+  .nav a {
+    font-size: 13px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }

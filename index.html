@@ -16,14 +16,16 @@
     <header class="header">
       <div class="wrapper">
         <div class="header-top">
-          <a href="/" class="logo">
-            <img src="./images/logo.png" alt="">
-            <span>საქართველოს ფინანსთა სამინისტრო</span>
-          </a>
+          <div>
+            <a href="/" class="logo">
+              <img src="./images/logo.png" alt=">საქართველოს ფინანსთა სამინისტრო">
+              <span>საქართველოს<br> ფინანსთა<br> სამინისტრო</span>
+            </a>
+          </div>
           <div class="extra">
             <a href="" class="go-mof">Go.Mof.ge</a>
             <div>
-              <a href="" class="lang active">ქარ </a>|
+              <a href="" class="lang active">ქარ </a>&Iota;
               <a href="" class="lang">eng</a>
             </div>
           </div> <!-- extra -->
@@ -43,7 +45,10 @@
             <a href="">მედია ცენტრი</a>
             <a href="">საჯარო ინფორმაცია</a>
           </nav>
-          <input type="search" class="search-box">
+          <form class="search">
+            <label class="sr-only" for="search-input">search on website</label>
+            <input type="search" id="search-input" class="search-box">
+          </form>
         </div>
       </div>
     </div>
@@ -52,27 +57,13 @@
       <div class="wrapper">
         <div class="banner-hero">
           <div class="helpful-links">
-            <a href="">სახელმწიფო ხაზინა
-              <img src="./images/launch.png" alt="">
-            </a>
-            <a href="">ბუღალტერული აღრიცხვის, ანგარიშებისა და აუდიტის ზედამხედველობის სამსახური
-              <img src="./images/launch.png" alt="">
-            </a>
-            <a href="">ფინანსთა სამინისტროს აკადემია
-              <img src="./images/launch.png" alt="">
-            </a>
-            <a href="">საფინანსო ანალიტიკური სამსახური
-              <img src="./images/launch.png" alt="">
-            </a>
-            <a href="">მომსახურების სააგენტო
-              <img src="./images/launch.png" alt="">
-            </a>
-            <a href="">საგამოძიებო სამსახური
-              <img src="./images/launch.png" alt="">
-            </a>
-            <a href="">შემოსავლების სამსახური
-              <img src="./images/launch.png" alt="">
-            </a>
+            <a href="http://example.com" target="_blank" rel="noopener">სახელმწიფო ხაზინა <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" target="_blank" rel="noopener">ბუღალტერული აღრიცხვის, ანგარიშებისა და აუდიტის ზედამხედველობის სამსახური <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" target="_blank" rel="noopener">ფინანსთა სამინისტროს აკადემია <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" target="_blank" rel="noopener">საფინანსო ანალიტიკური სამსახური <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" target="_blank" rel="noopener">მომსახურების სააგენტო <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" target="_blank" rel="noopener">საგამოძიებო სამსახური <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" target="_blank" rel="noopener">შემოსავლების სამსახური <img src="./images/launch.svg" alt=""></a>
           </div>
           <div class="widget">სახელმწიფო ბიუჯეტის მონაცემები</div>
         </div> <!-- banne-hero -->
@@ -204,7 +195,7 @@
               <a href="" class="footer-link">საგარეო დაფინანსება</a>
             </li>
             <li>
-              <a href="" class="footer-link">ფონანსური მართვის რეფორმა</a>
+              <a href="" class="footer-link">ფინანსური მართვის რეფორმა</a>
             </li>
           </ul>
 
@@ -238,13 +229,11 @@
             </li>
           </ul>
 
-        </div> <!-- footer links -->
+        </div> <!-- footer container -->
       </div> <!-- wrapper -->
     </footer>
 
   </div> <!-- root -->
-
-  <script src="./js/script.js"></script>
 
 </body>
 
