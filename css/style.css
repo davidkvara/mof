@@ -121,6 +121,10 @@ a:focus {
   margin-right: 20px;
 }
 
+.go-mof:hover {
+  text-decoration: underline;
+}
+
 .lang {
   font-family: "BPG Nino Mtavruli";
   font-weight: bold;
@@ -176,7 +180,7 @@ a:focus {
   color: #454545;
   background: url(../images/search-icon.svg) no-repeat 7px center;
   margin-left: 10px;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
   /* height: 100%; */
   border: 1px solid #d4d4d4;
   background-color: #efefef;
@@ -229,15 +233,30 @@ a:focus {
   letter-spacing: 0.3px;
   transition: 0.4s ease;
   color: #fff;
-  border-bottom: 0.12rem solid transparent;
+  user-select: none;
+  position: relative;
+}
+
+.launcher-link::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: -42px;
+  top: 4px;
+  opacity: 0;
+  transition: 0.2s ease-out;
 }
 
 .launcher-link + .launcher-link {
-  margin-top: 1rem;
+  margin-top: 1.15rem;
 }
 
-.launcher-link:hover {
-  border-color: #fff;
+.launcher-link:hover::before {
+  left: -18px;
+  opacity: 1;
 }
 
 .widget {
