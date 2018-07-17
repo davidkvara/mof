@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="shortcut icon" href="./images/logo.png">
   <title>საქართველოს ფინანსთა სამინისტრო</title>
 </head>
 
@@ -17,11 +16,12 @@
       <div class="wrapper">
         <div class="header-top">
           <div>
-            <a href="/" class="logo">
-              <img src="./images/logo.png" alt=">საქართველოს ფინანსთა სამინისტრო">
-              <span>საქართველოს<br> ფინანსთა<br> სამინისტრო</span>
+            <a href="#" class="logo">
+              <img src="./images/logo.png" class="logo-image" alt=">საქართველოს ფინანსთა სამინისტრო">
+              <span class="logo-text">საქართველოს<br> ფინანსთა<br> სამინისტრო</span>
             </a>
           </div>
+
           <div class="extra">
             <a href="" class="go-mof">Go.Mof.ge</a>
             <div>
@@ -29,98 +29,103 @@
               <a href="" class="lang">eng</a>
             </div>
           </div> <!-- extra -->
+
         </div> <!-- header-top -->
       </div> <!-- wrapper -->
     </header>
 
-    <div id="navbar" class="navbar">
+    <div class="navbar">
       <div class="wrapper">
         <div class="navbar-container">
           <nav class="nav">
-            <a href="">სამინიტროს შესახებ</a>
-            <a href="">ბიუჯეტი</a>
-            <a href="">სახელმწიფო ვალი</a>
-            <a href="">საგადასახადო სისტემა</a>
-            <a href="">კანონმდებლობა</a>
-            <a href="">მედია ცენტრი</a>
-            <a href="">საჯარო ინფორმაცია</a>
+            <a href="" class="nav-link">სამინიტროს შესახებ</a>
+            <a href="" class="nav-link">ბიუჯეტი</a>
+            <a href="" class="nav-link">სახელმწიფო ვალი</a>
+            <a href="" class="nav-link">საგადასახადო სისტემა</a>
+            <a href="" class="nav-link">კანონმდებლობა</a>
+            <a href="" class="nav-link">მედია ცენტრი</a>
+            <a href="" class="nav-link">საჯარო ინფორმაცია</a>
           </nav>
-          <form class="search">
-            <label class="sr-only" for="search-input">search on website</label>
-            <input type="search" id="search-input" class="search-box">
+          <form class="search-form">
+            <label class="sr-only" for="s">search on website</label>
+            <input type="search" id="s" class="search-input" autocomplete="off">
           </form>
         </div>
       </div>
     </div>
 
-    <div id="welcome-banner" class="banner">
+    <div id="banner" class="banner">
       <div class="wrapper">
-        <div class="banner-hero">
-          <div class="helpful-links">
-            <a href="http://example.com" target="_blank" rel="noopener">სახელმწიფო ხაზინა <img src="./images/launch.svg" alt=""></a>
-            <a href="http://example.com" target="_blank" rel="noopener">ბუღალტერული აღრიცხვის, ანგარიშებისა და აუდიტის ზედამხედველობის სამსახური <img src="./images/launch.svg" alt=""></a>
-            <a href="http://example.com" target="_blank" rel="noopener">ფინანსთა სამინისტროს აკადემია <img src="./images/launch.svg" alt=""></a>
-            <a href="http://example.com" target="_blank" rel="noopener">საფინანსო ანალიტიკური სამსახური <img src="./images/launch.svg" alt=""></a>
-            <a href="http://example.com" target="_blank" rel="noopener">მომსახურების სააგენტო <img src="./images/launch.svg" alt=""></a>
-            <a href="http://example.com" target="_blank" rel="noopener">საგამოძიებო სამსახური <img src="./images/launch.svg" alt=""></a>
-            <a href="http://example.com" target="_blank" rel="noopener">შემოსავლების სამსახური <img src="./images/launch.svg" alt=""></a>
+        <div class="banner-hero-wrapper">
+          <div class="outer-resources-container">
+          <!-- !!! think of alternative way of including launcher images/icons -->
+
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">სახელმწიფო ხაზინა <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">ბუღალტერული აღრიცხვის, ანგარიშებისა და აუდიტის ზედამხედველობის სამსახური <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">ფინანსთა სამინისტროს აკადემია <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">საფინანსო ანალიტიკური სამსახური <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">მომსახურების სააგენტო <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">საგამოძიებო სამსახური <img src="./images/launch.svg" alt=""></a>
+            <a href="http://example.com" class="launcher-link" target="_blank" rel="noopener">შემოსავლების სამსახური <img src="./images/launch.svg" alt=""></a>
           </div>
           <div class="widget">სახელმწიფო ბიუჯეტის მონაცემები</div>
-        </div> <!-- banne-hero -->
+        </div> <!-- banne-hero-wrapper -->
       </div> <!-- wrapper -->
     </div> <!-- banner -->
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="wrapper">
+
         <div class="news-slider">
           <h2>News Slider</h2>
         </div>
+
         <div class="services-container">
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle"><img src="./images/Greater_coat_of_arms.png" class="service-logo" alt=""></div>
+            <h2 class="service-title">ლეგალური მიგრაციის გზამკვლევი</h2>
+          </a>
+          <a href="#" class="service">
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle"><img src="./images/graphic-banner.png" class="service-logo" alt=""></div>
+            <h2 class="service-title">დაგეგმე ბიუჯეტი</h2>
+          </a>
+          <a href="#" class="service">
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
           <a href="#" class="service">
-            <div class="circle">e</div>
-            <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
-          </a>
-          <a href="#" class="service">
-            <div class="circle">e</div>
-            <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
-          </a>
-          <a href="#" class="service">
-            <div class="circle">e</div>
+            <div class="service-circle">e</div>
             <h2 class="service-title">საჯარო ინფორმაციის ელექტრონული ფორმით მოთხოვნა</h2>
           </a>
         </div> <!-- services-container -->
       </div> <!-- wrapper -->
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="wrapper">
         <div class="footer-logo">
           <img src="./images/symbol.png" alt="symbol">
@@ -229,11 +234,11 @@
             </li>
           </ul>
 
-        </div> <!-- footer container -->
+        </div> <!-- footer-container -->
       </div> <!-- wrapper -->
     </footer>
 
-  </div> <!-- root -->
+  </div>
 
 </body>
 
