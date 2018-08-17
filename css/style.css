@@ -74,6 +74,7 @@ a:focus {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -138,7 +139,7 @@ a:focus {
   font-weight: normal;
 }
 
-/* NAVIGATION MENU */
+/* NAVIGATION */
 
 .navbar {
   background: #f7f7f7;
@@ -184,6 +185,7 @@ a:focus {
   /* height: 100%; */
   border: 1px solid #d4d4d4;
   background-color: #efefef;
+  box-sizing: border-box;
 }
 
 .search-input:focus {
@@ -198,16 +200,8 @@ a:focus {
 .banner {
   /* height: 500px; */
   background: #4e54c8; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #8f94fb,
-    #4e54c8
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #8f94fb,
-    #4e54c8
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+  background: linear-gradient(to right, #8f94fb, #4e54c8);
   color: #fff;
 }
 
@@ -280,6 +274,7 @@ a:focus {
   justify-content: center;
   flex-wrap: wrap;
   padding: 40px 10px;
+  box-sizing: border-box;
 }
 
 .service {
